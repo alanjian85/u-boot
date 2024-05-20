@@ -74,6 +74,12 @@
 			#address-cells = <0>;
 			#interrupt-cells = <2>;
 		};
+
+		clint: clint@14000000 {
+			compatible = "thead,c900-clint";
+			reg = <0x14000000 0x10000>;
+			interrupts-extended = <&cpu0_intc 3>, <&cpu0_intc 7>;
+		};
 	};
 
 	pmu {
